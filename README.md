@@ -1,4 +1,4 @@
-# Birthday Love Test Surprise 🎂💕
+# Birthday Love habibi Surprise 🎂💕
 
 A beautiful, interactive multi-step birthday surprise website built with **React + Vite + Tailwind CSS + Framer Motion**.
 

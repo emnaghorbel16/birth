@@ -35,10 +35,16 @@ const config = {
 
   // Photos (from /public/images/us/)
   photos: [
-
     { src: "/images/us/69035063-34bc-4e1d-8a3d-5fade9e7deb9.jpg", caption: "Every moment with you is special 🌸" },
     { src: "/images/us/efb53489-9628-4516-8f5c-8f348a9b279c.jpg", caption: "Us forever & always 💖" },
     { src: "/images/us/1e56a1df-94e3-4bbb-ad9b-06b507b1eac1.jpg", caption: "My favorite memory with you 💕" },
+    { src: "/images/us/147cec75-5540-4c4d-a61b-193a9f68526f.jpg", caption: "You make me smile every day ✨" },
+    { src: "/images/us/15a1e521-67e4-4f05-a6d2-5a6c5c841e55.jpg", caption: "My happiest place is with you 🌷" },
+    { src: "/images/us/6f5d177e-a132-429d-90d4-8ceaa1e5632a.jpg", caption: "So in love with you 🎀" },
+    { src: "/images/us/a55887a8-12c7-4c87-8659-a30cd90ecd85.jpg", caption: "Always by your side ❤️" },
+    { src: "/images/us/c844dce0-20eb-4125-9b5c-566c04017e96.jpg", caption: "To many more sweet moments together 🥂" },
+    { src: "/images/us/c99090be-6140-4155-99f4-2ad47424287d.jpg", caption: "You are my favorite person 💫" },
+    { src: "/images/us/da2bdbf2-3435-4ca4-8cb3-ab40b3fce61f.jpg", caption: "My heart chooses you, always 🌹" },
     { src: "/images/us/collage.jpg", caption: "All our sweetest memories ✨" },
   ],
 

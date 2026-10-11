@@ -142,7 +142,7 @@ export const PersistentDecorations = () => (
 // Music toggle button
 export const MusicToggle = ({ isPlaying, onToggle }) => (
   <motion.button
-    className="fixed top-2 left-2 z-50 w-10 h-10 rounded-full glass flex items-center justify-center text-lg border border-rose shadow-md"
+    className="fixed top-3 left-3 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full glass flex items-center justify-center text-base sm:text-lg border border-rose shadow-md"
     onClick={onToggle}
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
@@ -195,14 +195,14 @@ export const useConfetti = () => {
 // Next button component
 export const NextButton = ({ onClick, label = 'Next →', className = '' }) => (
   <motion.button
-    className={`btn-pill flex items-center gap-2 shadow-md ${className}`}
+    className={`px-4 sm:px-6 py-1.5 sm:py-2 rounded-full bg-cream border-2 border-rose font-fredoka font-semibold text-sm sm:text-base text-raspberry cursor-pointer shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-rose flex items-center gap-1.5 ${className}`}
     onClick={onClick}
-    whileHover={{ scale: 1.08, y: -2 }}
-    whileTap={{ scale: 0.92 }}
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.4 }}
+    whileHover={{ scale: 1.06, y: -1 }}
+    whileTap={{ scale: 0.94 }}
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.3 }}
   >
-    <span className="font-fredoka font-semibold">{label}</span>
+    <span>{label}</span>
   </motion.button>
 )

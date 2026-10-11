@@ -93,6 +93,10 @@ export default function Screen4Memories({ onNext, onPauseBgMusic, onResumeBgMusi
     } else {
       // Pause background music before playing song.mp3
       if (onPauseBgMusic) onPauseBgMusic()
+      // Start from 45s (0:45) on first play
+      if (audioRef.current.currentTime < 45) {
+        audioRef.current.currentTime = 45
+      }
       audioRef.current.play().catch(() => {})
       setIsPlaying(true)
     }
@@ -160,7 +164,15 @@ export default function Screen4Memories({ onNext, onPauseBgMusic, onResumeBgMusi
           if (onResumeBgMusic) onResumeBgMusic()
         }}
         onTimeUpdate={handleTimeUpdate}
-        onLoadedMetadata={(e) => setDuration(e.target.duration)}
+        onLoadedMetadata={(e) => {
+          const d = e.target.duration || 1
+          setDuration(d)
+          if (e.target.currentTime < 45) {
+            e.target.currentTime = 45
+            setCurrentTime(45)
+            setProgress((45 / d) * 100)
+          }
+        }}
         onEnded={handleEnded}
       />
 
@@ -335,7 +347,7 @@ export default function Screen4Memories({ onNext, onPauseBgMusic, onResumeBgMusi
               <ShuffleIcon />
             </button>
             <button
-              onClick={() => { if (audioRef.current) audioRef.current.currentTime = 0 }}
+              onClick={() => { if (audioRef.current) audioRef.current.currentTime = 45 }}
               className="text-raspberry/60 hover:text-raspberry rounded-full w-8 h-8 flex items-center justify-center transition-colors"
               aria-label="Previous"
             >

@@ -66,7 +66,7 @@ export default function Screen2GiftBoxes({ onOpenGift, openedBoxes, onFinish }) 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            You passed the love test 🎁
+            You passed the love habibi 🎁
           </motion.h1>
           <motion.p
             className="font-quicksand text-raspberry mt-2 text-base md:text-lg"
@@ -117,12 +117,12 @@ export default function Screen2GiftBoxes({ onOpenGift, openedBoxes, onFinish }) 
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
                       <div className="w-full flex justify-center">
-                        <Sticker 
-                          src="/stickers/gift-open.gif" 
-                          alt="Open gift" 
-                          forceRestart={true} 
-                          fallback="🎁" 
-                          className="w-full h-auto drop-shadow-xl" 
+                        <Sticker
+                          src="/stickers/gift-open.gif"
+                          alt="Open gift"
+                          forceRestart={true}
+                          fallback="🎁"
+                          className="w-full h-auto drop-shadow-xl"
                         />
                       </div>
                       <div className="absolute -top-6 w-full flex justify-center">
@@ -138,16 +138,16 @@ export default function Screen2GiftBoxes({ onOpenGift, openedBoxes, onFinish }) 
                   ) : (
                     <motion.div
                       className="w-24 sm:w-32 md:w-44 origin-bottom"
-                      animate={{ 
+                      animate={{
                         scale: isHovered ? 1.25 : 1,
                       }}
                       transition={{ type: 'spring', stiffness: 350, damping: 15 }}
                     >
-                      <Sticker 
-                        src="/stickers/gift.gif" 
-                        alt="Gift box" 
-                        fallback="🎁" 
-                        className="w-full h-auto drop-shadow-2xl" 
+                      <Sticker
+                        src="/stickers/gift.gif"
+                        alt="Gift box"
+                        fallback="🎁"
+                        className="w-full h-auto drop-shadow-2xl"
                       />
                     </motion.div>
                   )}
