@@ -4,11 +4,23 @@ import { LovebirdsSVG, PaperPlaneSVG } from './SVGIllustrations'
 
 // Floating hearts/sparkles/balloons
 const FloatingElement = ({ type, style }) => {
+
   const emojis = {
     heart: '❤️',
     sparkle: '✨',
     balloon: '🎈',
     star: '⭐',
+    cake: '🎂',
+    kiss: '💋',
+    love: '💕',
+    couple: '🫶',
+    rose: '🌹',
+    gift: '🎁',
+    teddy: '🧸',
+    ring: '💍',
+    fire: '🔥',
+    angel: '😇',
+    birthday: '🥳',
     confetti: ['🎊', '🎉', '💫'][Math.floor(Math.random() * 3)],
   }
 

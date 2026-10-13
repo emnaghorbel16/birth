@@ -19,35 +19,33 @@ const Petal = ({ style }) => (
 // Speech bubble
 const SpeechBubble = ({ text, side, isLatest }) => (
   <motion.div
-    className={`relative bg-cream/95 border-2 border-rose rounded-2xl px-4 py-2.5 shadow-md max-w-[150px] sm:max-w-[175px] ${
-      side === 'left' ? 'rounded-tl-sm' : 'rounded-tr-sm'
-    }`}
+    className={`relative bg-cream/95 border-2 border-rose rounded-2xl px-4 py-2.5 shadow-md max-w-[150px] sm:max-w-[175px] ${side === 'left' ? 'rounded-tl-sm' : 'rounded-tr-sm'
+      }`}
     initial={{ opacity: 0, x: side === 'left' ? -25 : 25, scale: 0.7 }}
-    animate={{ 
-      opacity: 1, 
-      x: 0, 
-      scale: isLatest ? [1, 1.05, 1] : 1 
+    animate={{
+      opacity: 1,
+      x: 0,
+      scale: isLatest ? [1, 1.05, 1] : 1
     }}
     transition={{ duration: 0.5, type: 'spring', stiffness: 220 }}
   >
     <p className="font-caveat text-raspberry text-sm sm:text-base text-center leading-tight font-semibold">{text}</p>
     {/* Bubble tail */}
     <div
-      className={`absolute top-3.5 w-2.5 h-2.5 bg-cream border-r-2 border-b-2 border-rose transform ${
-        side === 'left' ? '-right-1.5 rotate-[-45deg]' : '-left-1.5 rotate-[135deg]'
-      }`}
+      className={`absolute top-3.5 w-2.5 h-2.5 bg-cream border-r-2 border-b-2 border-rose transform ${side === 'left' ? '-right-1.5 rotate-[-45deg]' : '-left-1.5 rotate-[135deg]'
+        }`}
     />
   </motion.div>
 )
 
 export default function Screen3Bouquet({ onNext }) {
   const messages = config.bouquetMessages || [
-    "Another year, another reason to love you",
-    "Life feels sweeter with you",
-    "You make every moment special",
-    "I choose you every day",
-    "My love for you keeps growing",
-    "My heart will always choose you",
+    "Joyeux anniversaire ya rouhyy ❤️🎂",
+    "nchalah btoul 3omrrkk  habibi ",
+    "kol 3am wnty far7ann 😘",
+    "kol aam wnty business man 💸🤍",
+    "wish u all the best habibi in your life ✨❤️",
+    "nhebek barcha barchet  💋"
   ]
 
   // Reveal messages one by one

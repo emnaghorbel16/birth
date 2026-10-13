@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { NextButton } from '../components/SharedUI'
 import config from '../config'
 
-const LETTER_TEXT = config.letterText || `Happy Birthday, my love! 🎂 You make my life feel more beautiful and meaningful, and I feel so lucky to have you. I love you wholeheartedly, and I can't wait to celebrate many more birthdays with you. You make me smile, you make me feel safe, and you bring so much happiness into my world. Thank you for being you and for filling my heart with so much love. No matter what happens, I will always choose you.`
+const LETTER_TEXT = config.letterText || `Happy Birthday, my loveee ❤️ I wish you all the best in life. I hope you always stay happy and get everything you dream of. I'm so happy to have you in my life,  You mean so much to me, and I love you more than words can say. I hope we will celebrate many more birthdays together and make beautiful memories. Nhebek barcha ya rouhiii ❤️ You will always have a special place in my heart. Happy birthday, my favorite person o raby ykhlik leya bb `
 
 // Typewriter hook
 const useTypewriter = (text, speed = 30, startDelay = 600) => {

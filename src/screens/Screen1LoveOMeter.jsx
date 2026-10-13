@@ -249,24 +249,49 @@ export default function Screen1LoveOMeter({ onNext }) {
           </svg>
         </div>
 
-        {/* Slider */}
-        <div className="w-full max-w-sm px-4 mt-4 sm:mt-6">
-          <input
-            type="range"
-            min="0"
-            max="500"
-            value={value}
-            onChange={handleSlider}
-            disabled={locked}
-            className="w-full custom-slider"
-            style={{
-              background: `linear-gradient(to right, #A3123F ${(value / 500) * 100}%, #FDE4E8 ${(value / 500) * 100}%)`
-            }}
-            aria-label="Love percentage slider"
-            aria-valuemin={0}
-            aria-valuemax={500}
-            aria-valuenow={value}
-          />
+        {/* Slider & Animated Hint */}
+        <div className="w-full max-w-sm px-4 mt-3 sm:mt-5 flex flex-col items-center">
+          {!locked && value < 500 && (
+            <motion.div
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center gap-1.5 mb-2.5 px-3 py-1 bg-white/80 backdrop-blur-sm border border-rose/50 rounded-full shadow-sm text-xs sm:text-sm font-quicksand font-bold text-raspberry"
+            >
+              <span>{value === 0 ? "Fais glisser vers la droite 👉" : "Continue de glisser vers le MAX !"}</span>
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+              >
+                💖
+              </motion.span>
+            </motion.div>
+          )}
+
+          <div className="w-full relative">
+            <input
+              type="range"
+              min="0"
+              max="500"
+              value={value}
+              onChange={handleSlider}
+              disabled={locked}
+              className="w-full custom-slider"
+              style={{
+                background: `linear-gradient(to right, #A3123F ${(value / 500) * 100}%, #FDE4E8 ${(value / 500) * 100}%)`
+              }}
+              aria-label="Love percentage slider"
+              aria-valuemin={0}
+              aria-valuemax={500}
+              aria-valuenow={value}
+            />
+          </div>
+
+          <div className="w-full flex justify-between items-center text-[11px] sm:text-xs font-quicksand font-bold text-raspberry/70 mt-1.5 px-1 select-none">
+            <span>0%</span>
+            <span className="text-hotpink flex items-center gap-1 font-fredoka font-semibold">
+              MAX 500% 💕
+            </span>
+          </div>
         </div>
       </div>
     </AnimatedBackground>
