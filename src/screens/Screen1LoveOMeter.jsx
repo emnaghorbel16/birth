@@ -12,8 +12,8 @@ const getMessage = (value) => {
 
 // Map value to GIF
 const getMascotSrc = (value) => {
-  if (value < 50) return '/stickers/mascot-sad.gif'
-  if (value < 80) return '/stickers/mascot-meh.gif'
+  if (value < 100) return '/stickers/mascot-sad.gif'
+  if (value < 250) return '/stickers/mascot-meh.gif'
   if (value < 500) return '/stickers/mascot-happy.gif'
   return '/stickers/mascot-ecstatic.gif'
 }
@@ -109,7 +109,7 @@ export default function Screen1LoveOMeter({ onNext }) {
     <AnimatedBackground className="screen">
       {/* Background Decorations (Cute & subtle stickers) */}
       <motion.div
-        className="absolute top-4 right-3 sm:top-6 sm:right-6 w-16 sm:w-20 md:w-24 opacity-80 z-0 cursor-pointer pointer-events-auto"
+        className="absolute top-4 right-3 sm:top-6 sm:right-6 w-24 sm:w-28 md:w-32 opacity-80 z-0 cursor-pointer pointer-events-auto"
         animate={{ y: [0, -8, 0], rotate: [-2, 2, -2] }}
         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
         whileHover={{ scale: 1.15, opacity: 1 }}
@@ -168,7 +168,7 @@ export default function Screen1LoveOMeter({ onNext }) {
         </div>
 
         {/* Message + percentage */}
-        <div className="text-center flex flex-col items-center gap-0.5 h-24 justify-center my-1">
+        <div className="text-center flex flex-col items-center gap-1 h-28 justify-center my-1">
           <AnimatePresence mode="popLayout">
             <motion.div
               key={getMessage(value)}
@@ -178,7 +178,7 @@ export default function Screen1LoveOMeter({ onNext }) {
               transition={{ duration: 0.3 }}
               className="flex flex-col items-center"
             >
-              <p className="font-quicksand font-semibold text-base sm:text-lg md:text-xl text-raspberry mb-1">
+              <p className="font-quicksand font-bold text-lg sm:text-xl md:text-2xl text-hotpink mb-1">
                 {getMessage(value)}
               </p>
               {showNext ? (

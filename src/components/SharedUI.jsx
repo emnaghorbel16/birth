@@ -195,7 +195,7 @@ export const useConfetti = () => {
 // Next button component
 export const NextButton = ({ onClick, label = 'Next →', className = '' }) => (
   <motion.button
-    className={`px-4 sm:px-6 py-1.5 sm:py-2 rounded-full bg-cream border-2 border-rose font-fredoka font-semibold text-sm sm:text-base text-raspberry cursor-pointer shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-rose flex items-center gap-1.5 ${className}`}
+    className={`px-5 sm:px-7 py-2 sm:py-2.5 rounded-full bg-cream border-2 border-rose font-fredoka font-semibold text-base sm:text-lg text-raspberry cursor-pointer shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-rose flex items-center gap-2 ${className}`}
     onClick={onClick}
     whileHover={{ scale: 1.06, y: -1 }}
     whileTap={{ scale: 0.94 }}

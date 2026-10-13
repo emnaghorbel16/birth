@@ -102,7 +102,7 @@ export default function Screen5Letter({ onNext }) {
           {/* Cat holding heart - bottom left */}
           <div className="flex flex-col justify-end">
             <motion.div
-              className="w-20 md:w-28"
+              className="w-28 md:w-36"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             >

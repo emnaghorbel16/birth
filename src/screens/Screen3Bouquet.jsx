@@ -19,7 +19,7 @@ const Petal = ({ style }) => (
 // Speech bubble
 const SpeechBubble = ({ text, side, isLatest }) => (
   <motion.div
-    className={`relative bg-cream/95 border-2 border-rose rounded-2xl px-3 py-2 shadow-md max-w-[125px] sm:max-w-[145px] ${
+    className={`relative bg-cream/95 border-2 border-rose rounded-2xl px-4 py-2.5 shadow-md max-w-[150px] sm:max-w-[175px] ${
       side === 'left' ? 'rounded-tl-sm' : 'rounded-tr-sm'
     }`}
     initial={{ opacity: 0, x: side === 'left' ? -25 : 25, scale: 0.7 }}
@@ -30,7 +30,7 @@ const SpeechBubble = ({ text, side, isLatest }) => (
     }}
     transition={{ duration: 0.5, type: 'spring', stiffness: 220 }}
   >
-    <p className="font-caveat text-raspberry text-xs sm:text-sm text-center leading-tight font-semibold">{text}</p>
+    <p className="font-caveat text-raspberry text-sm sm:text-base text-center leading-tight font-semibold">{text}</p>
     {/* Bubble tail */}
     <div
       className={`absolute top-3.5 w-2.5 h-2.5 bg-cream border-r-2 border-b-2 border-rose transform ${
@@ -142,7 +142,7 @@ export default function Screen3Bouquet({ onNext }) {
 
           {/* Bouquet center */}
           <motion.div
-            className="flex-shrink-0 w-32 sm:w-40 md:w-48"
+            className="flex-shrink-0 w-40 sm:w-48 md:w-56"
             animate={{ rotate: [-2, 2, -2] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
           >
